@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/system_file.xsd">
+    <system>
+        <section id="cookienoticesettings" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Cookie Notice Settings</label>
+            <tab>dhsservices</tab>
+            <resource>DHSServices_CookieNoticeConfig::configurations</resource>
+            <group id="accept_settings" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Accept Settings</label>
+                <field id="acceptcookietimeenable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Accept Cookie after Time enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        <![CDATA[Enable Auto Accept Cookie after time.]]>
+                    </comment>
+                </field>
+                <field id="acceptcookietimevalue" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Accept Cookie after Time value</label>
+                    <depends>
+                        <field id="acceptcookietimeenable">1</field>
+                    </depends>
+                    <validate>integer</validate>
+                    <comment>
+                        <![CDATA[Time in seconds.]]>
+                    </comment>
+                </field>
+                <field id="acceptcookiescrollenable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Accept Cookie after Scroll enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        <![CDATA[Enable Auto Accept Cookie after scrolling.]]>
+                    </comment>
+                </field>
+                <field id="acceptcookiescrollvalue" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Accept Cookie after Scroll value</label>
+                    <depends>
+                        <field id="acceptcookiescrollenable">1</field>
+                    </depends>
+                    <validate>integer</validate>
+                    <comment>
+                        <![CDATA[Scroll down in pixels.]]>
+                    </comment>
+                </field>
+                <field id="acceptcookiepagechangeenable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Accept Cookie after Page change enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        <![CDATA[Enable Auto Accept Cookie after page change.]]>
+                    </comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

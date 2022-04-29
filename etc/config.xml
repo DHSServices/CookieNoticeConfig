@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <cookienoticesettings>
+            <accept_settings>
+                <acceptcookietimeenable>0</acceptcookietimeenable>
+                <acceptcookiescrollenable>0</acceptcookiescrollenable>
+                <acceptcookiepagechangeenable>0</acceptcookiepagechangeenable>
+            </accept_settings>
+        </cookienoticesettings>
+    </default>
+</config>
